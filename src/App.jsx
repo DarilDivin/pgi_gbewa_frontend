@@ -1,8 +1,10 @@
 // import { useState } from 'react';
 import './App.css'
-// import SingleProjectPage from './components/pages/SingleProjectPage'
+// import { Administration } from './components/pages/Administration'
+// import ProjectHome from './components/pages/ProjectHome'
+import SingleProjectPage from './components/pages/SingleProjectPage'
 // import DashboardPrograms from './components/pages/DashboardPrograms'
-import DashboardProjects from './components/pages/DashboardProjects'
+// import DashboardProjects from './components/pages/DashboardProjects'
 
 function App() {
 
@@ -11,8 +13,10 @@ function App() {
   return (
     <>
       {/* <DashboardPrograms /> */}
-      <DashboardProjects />
-      {/* <SingleProjectPage /> */}
+      {/* <DashboardProjects /> */}
+      <SingleProjectPage />
+      {/* <ProjectHome /> */}
+      {/* <Administration /> */}
 
 
       {/* A implémenter */}
