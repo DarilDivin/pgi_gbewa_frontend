@@ -11,25 +11,25 @@ const SingleProjectPage = () => {
                 <ChevronLeft />
                 <h1>Liste des projets</h1>
             </div>
-            <div className="w-full px-12 lg:px-28 ">
+            <div className="w-full px-4 lg:px-28 ">
                 <h1 className="font-bold text-2xl my-8">Nom du projet</h1>
                 <div className="flex flex-col xl:flex-row gap-6 h-auto ">
                     <div className="flex flex-col w-full xl:w-3/4 py-2 px-6 shadow-xl rounded-xl border-[0.5px] border-slate-200">
-                        <span className="flex gap-16 pb-3">
+                        <span className="flex gap-2 lg:gap-16 pb-3 flex-col lg:flex-row">
                             <h3 className="font-bold text-lg w-52">Intervenants</h3>
                             <AvatarGroup />
                         </span>
-                        <span className="flex gap-16 pb-3">
-                            <h3 className="font-bold text-base xl:text-lg w-36 xl:w-52">Echéance</h3>
-                            <p className=" px-4 text-sm font-semibold flex items-center rounded-lg border-[1px] border-slate-200 ">12 avril 2024 - 12 juin 2024</p>
+                        <span className="flex gap-2 lg:gap-16 pb-3 flex-col lg:flex-row">
+                            <h3 className="font-bold text-base xl:text-lg w-52">Echéance</h3>
+                            <p className=" px-4 w-max text-sm font-semibold flex items-center rounded-lg border-[1px] border-slate-200 ">12 avril 2024 - 12 juin 2024</p>
                         </span>
-                        <span className="flex gap-16 pb-3">
-                            <h3 className="font-bold text-base xl:text-lg w-36 xl:w-52">Axe Stratégique</h3>
-                            <p className=" px-4 text-sm font-semibold flex items-center rounded-lg border-[1px] border-slate-200 ">Axe 1</p>
+                        <span className="flex gap-2 lg:gap-16 pb-3 flex-col lg:flex-row">
+                            <h3 className="font-bold text-base xl:text-lg w-52">Axe Stratégique</h3>
+                            <p className=" px-4 w-max text-sm font-semibold flex items-center rounded-lg border-[1px] border-slate-200 ">Axe 1</p>
                         </span>
-                        <span className="flex gap-16 pb-3">
-                            <h3 className="font-bold text-base xl:text-lg w-36 xl:w-52">Zones d'intervention</h3>
-                            <p className=" px-4 text-sm font-semibold flex items-center rounded-lg border-[1px] border-slate-200 ">Cotonou - Ouidah - Dassa</p>
+                        <span className="flex gap-2 lg:gap-16 pb-3 flex-col lg:flex-row">
+                            <h3 className="font-bold text-base xl:text-lg w-52">Zones d'intervention</h3>
+                            <p className=" px-4 w-max text-sm font-semibold flex items-center rounded-lg border-[1px] border-slate-200 ">Cotonou - Ouidah - Dassa</p>
                         </span>
                         <div>
                             <p className=" text-sm mb-4 font-semibold text-black/70">
@@ -119,7 +119,7 @@ const SingleProjectPage = () => {
 
                 <div className="flex flex-col p-2 my-8 rounded-xl">
                     <h3 className="my-8 font-bold text-black/70 text-2xl">Point Financier</h3>
-                    <div className="flex gap-2 overflow-x-scroll px-2">
+                    <div className="flex gap-2 flex-wrap lg:flex-nowrap justify-center lg:justify-start">
                         <div className="min-w-[200px] size-[200px] rounded-3xl flex flex-col justify-start gap-4 bg-blue-400/50 p-4">
                             <span className="rounded-full bg-blue-700 size-10 flex justify-center items-center p-[2px]">
                                 <BarChartBig className="size-[25px] text-white " />
@@ -169,7 +169,7 @@ const SingleProjectPage = () => {
                 </div>
 
                 <div className="flex flex-col w-full border-[1px] border-green-500/70 bg-green-100/50 rounded-lg p-4 gap-4 mb-8">
-                    <div className=" flex justify-between items-center">
+                    <div className="flex flex-wrap justify-between items-center">
                         <h3 className="font-bold text-2xl text-black/70">Soumission de Documents</h3>
                         <button className="text-white flex gap-2 p-3 rounded-lg bg-green-700 w-max font-bold">
                             Ajouter un Document

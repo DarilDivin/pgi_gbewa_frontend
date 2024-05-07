@@ -8,7 +8,7 @@ const DashboardPrograms = () => {
   return (
     <Layout>
       {/* <div className="w-full flex flex-1 flex-wrap justify-between items-center px-12 lg:px-28 py-8 gap-5 overflow-scroll"> */}
-      <div className="w-full grid grid-cols-1 gap-5 mt-6 sm:grid-cols-2 lg:grid-cols-4 border-b pb-10 px-12 lg:px-28 justify-between">
+      <div className="w-full grid grid-cols-1 gap-5 mt-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 border-b pb-10 px-12 lg:px-28 justify-between">
         <Card title={'Programmes'} number={'7.558'} link={'/login'} active>
           <UsersRound size={30} strokeWidth={3} className={"stroke-slate-50"}/>
         </Card>

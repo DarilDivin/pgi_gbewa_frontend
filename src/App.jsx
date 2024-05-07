@@ -1,8 +1,8 @@
 // import { useState } from 'react';
 import './App.css'
 // import SingleProjectPage from './components/pages/SingleProjectPage'
-import DashboardPrograms from './components/pages/DashboardPrograms'
-// import DashboardProjects from './components/pages/DashboardProjects'
+// import DashboardPrograms from './components/pages/DashboardPrograms'
+import DashboardProjects from './components/pages/DashboardProjects'
 
 function App() {
 
@@ -10,8 +10,8 @@ function App() {
 
   return (
     <>
-      <DashboardPrograms />
-      {/* <DashboardProjects /> */}
+      {/* <DashboardPrograms /> */}
+      <DashboardProjects />
       {/* <SingleProjectPage /> */}
 
 
