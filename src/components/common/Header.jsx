@@ -1,10 +1,12 @@
-import { BellRing, Search, X } from "lucide-react"
+/* eslint-disable react/prop-types */
+import { BellRing, Menu, Search, X } from "lucide-react"
 import { useState } from "react";
 
-const Header = () => {
+const Header = ({ showSidebar }) => {
 
     const [adminIsActive, setAdminIsActive] = useState(false)
     const [sidebarIsDisplayed, setSidebarIsDisplayed] = useState(false)
+    const [showDropDown, setShowDropDown] = useState(false)
 
     const toggleTabs = (e) => {
         // console.log(e.target.firstChild.data);
@@ -15,13 +17,18 @@ const Header = () => {
         }
     }
 
+    const toggleDropDown = () => {
+        setShowDropDown(!showDropDown)
+    }
+
     const showSeachBar = () => {
         console.log(sidebarIsDisplayed)
         setSidebarIsDisplayed(!sidebarIsDisplayed)
     }
 
   return (
-    <div className='w-full h-16 shadow-black flex justify-evenly items-center border-b-[1px] border-gray-200 py-2 sticky top-0 bg-white'>
+    <div className='w-full h-16 shadow-black flex justify-evenly items-center border-b-[1px] border-gray-200 py-2 sticky top-0 bg-white z-10'>
+        <Menu className="cursor-pointer hover:bg-gray-200 rounded-full p-2 size-8 lg:hidden" onClick={() => showSidebar(true)} />
         <div className='absolute p-3 hidden lg:relative lg:block w-full lg:w-[400px]'>
             <input type="text" className="w-full h-[45px] rounded-lg px-2 text-lg border-[1px] border-gray-300" placeholder="Rechercher ici..."/>
             <Search color="#aaa" className="absolute top-1/2 right-4 -translate-y-1/2" />
@@ -39,12 +46,21 @@ const Header = () => {
         </div>
         <div className="flex items-center lg:gap-6">
             <Search className="cursor-pointer hover:bg-gray-200 rounded-full p-2 size-8 lg:hidden" onClick={showSeachBar}/>
-            <BellRing className="cursor-pointer hover:bg-gray-200 rounded-full p-2 size-8 "/>
-            <div className="cursor-pointer size-[40px] bg-violet-700 hover:bg-violet-900 text-white rounded-full flex justify-center items-center font-bold text-xl">
+            {/* <BellRing className="cursor-pointer hover:bg-gray-200 rounded-full p-2 size-8 "/> */}
+            <div className="cursor-pointer size-[40px] bg-violet-700 hover:bg-violet-900 text-white rounded-full flex justify-center items-center font-bold text-xl" onClick={toggleDropDown}>
                 {/* <img src="" alt="" /> */}
                 <p>P</p>
             </div>
         </div>
+
+        {showDropDown && 
+            <div className="w-[200px] border-[1px] border-gray-400 rounded-lg p-1 absolute top-[70px] right-12 transition-all bg-white">
+                <a className="flex gap-2 items-center text-sm hover:bg-green-700 hover:text-white rounded cursor-pointer">
+                    <BellRing className="cursor-pointer hover:bg-gray-200 rounded-full p-2 size-8 "/>
+                    <p>Notification</p>
+                </a>
+            </div>
+        }
     </div>
   )
 }

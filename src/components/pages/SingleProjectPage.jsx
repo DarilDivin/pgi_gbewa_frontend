@@ -7,11 +7,11 @@ import DoghnutChart from "../ui/DoghnutChart"
 const SingleProjectPage = () => {
     return (
         <Layout>
-            <div className="flex gap-2 lg:gap-4 items-center font-bold text-xl px-12 lg:pl-28">
+            <div className="flex gap-2 lg:gap-4 items-center font-bold text-xl px-12">
                 <ChevronLeft />
                 <h1>Liste des projets</h1>
             </div>
-            <div className="w-full px-4 lg:px-28 ">
+            <div className="w-full px-12 ">
                 <h1 className="font-bold text-2xl my-8">Nom du projet</h1>
                 <div className="flex flex-col xl:flex-row gap-6 h-auto ">
                     <div className="flex flex-col w-full xl:w-3/4 py-2 px-6 shadow-xl rounded-xl border-[0.5px] border-slate-200">
@@ -46,11 +46,11 @@ const SingleProjectPage = () => {
                     <div className="flex flex-col items-center h-auto w-full xl:w-1/4 p-2 shadow-xl rounded-xl border-[0.5px] border-slate-200">
                         <h3 className="font-bold text-lg my-4">Evolution des Activités</h3>
                         <div className="flex justify-between items-center gap-6">
-                            <div className="flex flex-col items-center gap-2 p-2 border-[1px] border-slate-300">
+                            <div className="flex flex-col items-center gap-2 p-1 rounded-sm border-[1px] border-slate-300">
                                 <p className="text-center">Activités totales</p>
                                 <p className="font-bold text-2xl">476</p>
                             </div>
-                            <div className="flex flex-col items-center gap-2 p-2 border-[1px] border-slate-300">
+                            <div className="flex flex-col items-center gap-2 p-1 rounded-sm border-[1px] border-slate-300">
                                 <p className="text-center">Activités totales</p>
                                 <p className="font-bold text-2xl">476</p>
                             </div>
@@ -64,7 +64,7 @@ const SingleProjectPage = () => {
                                 <div className="group flex flex-col gap-2 rounded-lg bg-white p-2 text-black" tabIndex="1">
                                     <div className="flex cursor-pointer items-center justify-between">
                                         <span className="flex gap-4 items-center font-bold text-black/70">
-                                            <span className="size-[10px] block rounded-full bg-green-300 before:size-[20px] before:bg-green-200/50 before:block before:-translate-x-1/4 before:-translate-y-1/4 before:rounded-full before:relative relative"></span> 
+                                            <span className="size-[10px] block rounded-full bg-green-300 before:size-[20px] before:bg-green-200/50 before:block before:-translate-x-1/4 before:-translate-y-1/4 before:rounded-full before:relative relative z-0"></span> 
                                             Activités terminées 
                                         </span>
                                         <span className="flex gap-2 font-bold">

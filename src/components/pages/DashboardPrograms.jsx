@@ -7,8 +7,8 @@ const DashboardPrograms = () => {
 
   return (
     <Layout>
-      {/* <div className="w-full flex flex-1 flex-wrap justify-between items-center px-12 lg:px-28 py-8 gap-5 overflow-scroll"> */}
-      <div className="w-full grid grid-cols-1 gap-5 mt-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 border-b pb-10 px-12 lg:px-28 justify-between">
+      {/* <div className="w-full flex flex-1 flex-wrap justify-between items-center px-12 py-8 gap-5 overflow-scroll"> */}
+      <div className="w-full grid grid-cols-1 gap-5 mt-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 border-b pb-10 px-12 justify-between">
         <Card title={'Programmes'} number={'7.558'} link={'/login'} active>
           <UsersRound size={30} strokeWidth={3} className={"stroke-slate-50"}/>
         </Card>
@@ -23,7 +23,7 @@ const DashboardPrograms = () => {
         </Card>
       </div>
 
-      <div className="flex flex-col lg:flex-row justify-between px-12 lg:px-28 my-8 flex-wrap gap-4">
+      <div className="flex flex-col lg:flex-row justify-between px-12 my-8 flex-wrap gap-4">
         <h3 className="font-bold text-3xl">Programmes</h3>
         <div className="flex flex-1 max-w-3xl gap-4 justify-between flex-wrap">
           <select name="" id="" className="min-w-60 max-w-64 xl:max-w-80 border-[1px] h-10 border-slate-200 rounded px-4 overflow-clip">
@@ -45,14 +45,14 @@ const DashboardPrograms = () => {
         </div>
       </div>
 
-      {/* <div className="flex justify-center px-12 lg:px-28 w-full"> */}
+      {/* <div className="flex justify-center px-12 w-full"> */}
 
       {/* For Rabelais */}
       {/* grid grid-cols-1 gap-5 mt-6 sm:grid-cols-2 lg:grid-cols-4 border-b pb-10 */}
 
       {/* Mine */}
-      {/* flex flex-wrap py-8 px-12 lg:px-28 gap-[30px] overflow-y-scroll w-auto */}
-        <div className="grid grid-cols-1 gap-5 mt-6 sm:grid-cols-2 lg:grid-cols-4 border-b pb-10 px-12 lg:px-28">
+      {/* flex flex-wrap py-8 px-12 gap-[30px] overflow-y-scroll w-auto */}
+        <div className="grid grid-cols-1 gap-5 mt-6 sm:grid-cols-2 lg:grid-cols-4 border-b pb-10 px-12">
           <ProgramCard title={"Présentation de conception"} subtitle={"Marketing de vente"} progres={"17/20"} date={"04 Mai 2024"}/>
           <ProgramCard title={"Présentation de conception"} subtitle={"Marketing de vente"} progres={"4/10"} date={"04 Mai 2024"}/>
           <ProgramCard title={"Présentation de conception"} subtitle={"Marketing de vente"} progres={"35/78"} date={"04 Mai 2024"}/>
