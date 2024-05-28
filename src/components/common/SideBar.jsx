@@ -30,9 +30,9 @@ const SideBar = ({ open }) => {
                             <p className={`${isSemiClosed ? 'hidden' : 'block line-clamp-1'} `}>Programmes</p>
                         </a>
                         {/* <SidebarLink>
-                        <PanelsTopLeft />
-                        <p className=" line-clamp-1">Programmes</p>
-                    </SidebarLink> */}
+                            <PanelsTopLeft />
+                            <p className=" line-clamp-1">Programmes</p>
+                        </SidebarLink> */}
                         <a href="#" className={`${isSemiClosed ? "justify-center" : "justify-start px-5"} w-full h-10 flex gap-4 items-center bg-slate-200 text-black/70 font-semibold hover:text-white hover:bg-green-600 text-lg rounded-lg active:bg-green-500 active:text-white`}>
                             <PanelsTopLeft size={25} />
                             <p className={`${isSemiClosed ? 'hidden' : 'block line-clamp-1'} `}>Projets</p>
