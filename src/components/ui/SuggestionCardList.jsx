@@ -1,7 +1,6 @@
-import { SuggestionCard } from "./SuggestionCard.jsx";
+import SuggestionCard from "./SuggestionCard.jsx";
 
-
-export function SuggestionCardList () {
+export default function SuggestionCardList () {
     return (
         <div className="w-full h-auto overflow-x-scroll">
             <div className="ml-4 flex flex-row gap-4 justify-around">

@@ -1,6 +1,7 @@
 import { Download } from "lucide-react";
 
-export function SuggestionCard ({treated, picture, src}) {
+// eslint-disable-next-line react/prop-types
+export default function SuggestionCard ({treated, picture, src}) {
     //treated pour savoir si ce "dossier" est traité ou pas.
     //picture pour savoir si ce "dossier" a une image de profil.
     //src sera la valeur du lien src au cas où le dossier aura une image. Elle prendra la valeur "none" sinon.

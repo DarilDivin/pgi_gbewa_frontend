@@ -1,6 +1,7 @@
 import { Download } from "lucide-react";
 
-export function ReceiveCard ({picture, src}) {
+// eslint-disable-next-line react/prop-types
+export default function ReceiveCard ({picture, src}) {
 
     let hasPicture = picture;
     let profilPicture = [];

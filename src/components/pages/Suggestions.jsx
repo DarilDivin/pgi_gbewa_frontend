@@ -1,61 +1,39 @@
-import { useState } from "react";
-import {  Plus, Redo2, Undo2 } from "lucide-react";
 import Layout from "../common/Layout.jsx";
-import { ReceiveSuggestion } from "./ReceiveSuggestion.jsx";
-import { PlaintesSoumises } from "./PlaintesSoumises.jsx";
+import SuggestionSingleCard from "../ui/SuggestionSingleCard.jsx";
+import PlainteSugCardHead from "../ui/PlainteSugCardHead.jsx";
+import Card from "../ui/Card.jsx";
+import { FolderMinus, SquareGanttChart, UsersRound } from "lucide-react";
 
-export function Suggestions () {
-
-    const [receiveIsActive, setReceiveIsActive] = useState(false);
-    const container = [];
-
-    //La gestion de la bascule entre Soumis et Reçus ne marche pas.
-    const toggleTabs = (e) => {
-        console.log(e.target.firstChild.data);
-        if (e.target.firstChild.data === "Reçus") {
-            console.log("Reçus");
-            container.push(
-                <ReceiveSuggestion/>
-            )
-            setReceiveIsActive(true)
-        } else {
-            console.log("Soumis");
-            container.push(
-                <PlaintesSoumises/>
-            )
-            setReceiveIsActive(false)
-        }
-    }
-    //La gestion de la bascule entre Soumis et Reçus ne marche pas.
-
+export default function Suggestions () {
     return(
         <Layout>
-            <div className="w-[150px] sm:w-[200px] lg:w-[300px] bg-green-700 h-[45px] rounded-[6px] p-[3px] flex justify-between mx-auto mb-20">
-                <button className={`${receiveIsActive ? 'text-white' : 'bg-slate-50 text-dark/70'} text-[10px] sm:text-xs lg:text-base h-full  w-[150px] px-8 rounded font-semibold`} onClick={toggleTabs}>Soumis</button>
-                <button className={`${receiveIsActive ? 'bg-slate-50 text-dark/70' : 'text-white '} text-[10px] sm:text-xs lg:text-base w-[150px] font-semibold h-full rounded `} onClick={toggleTabs}>Reçus</button>
+            <div className="w-full grid grid-cols-1 gap-5 mt-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 pb-10 px-12 justify-between">
+                <Card title={'Employées'} number={'7.558'} link={'/login'} active>
+                    <UsersRound size={30} strokeWidth={3} className={"stroke-slate-50"}/>
+                </Card>
+                <Card title={'Rapports'} number={'6.187'} link={'/login'}>
+                    <FolderMinus size={30} strokeWidth={3} className={" stroke-green-700 group-hover:stroke-slate-50"}/>
+                </Card>
+                <Card title={'Présence'} number={'1.627'} link={'/login'}>
+                    <UsersRound size={30} strokeWidth={3} className={" stroke-green-700 group-hover:stroke-slate-50"}/>
+                </Card>
+                <Card title={'Activités'} number={'3.275'} link={'/login'}>
+                    <SquareGanttChart size={30} strokeWidth={3} className={" stroke-green-700 group-hover:stroke-slate-50"}/>
+                </Card>
             </div>
-
-            <div className="flex flex-col lg:flex-row justify-between px-12 lg:pl-20 lg:pr-12 my-8 mb-12 flex-wrap gap-4">
-                <h3 className="font-bold text-3xl">Plaintes et Suggestions</h3>
-                <div className="flex flex-1 max-w-2xl gap-2 justify-between flex-wrap">
-                    <select name="" id="" className="min-w-60 max-w-64 xl:max-w-80 border-[1px] h-10 border-slate-200 rounded px-4 overflow-clip">
-                        <option value="">Trier par</option>
-                        <option value="">Critère 1</option>
-                        <option value="">Critère 2</option>
-                        <option value="">Critère 3</option>
-                        <option value="">Critère 4</option>
-                    </select>
-                    <div className="flex items-center justify-evenly gap-4 text-slate-900/70">
-                        <Undo2 className="cursor-pointer hover:text-slate-900"/>
-                        <Redo2 className="cursor-pointer hover:text-slate-900"/>
-                    </div>
-                    <button className="flex px-4 py-2 justify-center items-center bg-green-700 text-white rounded-md font-bold gap-4">
-                        Ajouter
-                        <Plus />
-                    </button>
+            <PlainteSugCardHead>
+                Rapport
+            </PlainteSugCardHead>
+            <div className="mb-8 pl-8 lg:pl-16 pr-8 lg:pr-12 h-auto">
+                <div className="font-bold text-gray-600 text-2xl">
+                    Aujourd&apos;hui
                 </div>
+                <SuggestionSingleCard
+                        picture={false}
+                        src={""}
+                        show={false}
+                    />
             </div>
-            {container}
         </Layout>
     )
 }
